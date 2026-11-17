@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { appName } from '@/lib/config'
 import { usePathname } from 'next/navigation'
 
 const links = [
@@ -14,6 +15,7 @@ export default function Header() {
 
   return (
     <header className="header">
+      <span className="app-name">{appName}</span>
       <nav>
         {links.map((link) => (
           <Link
